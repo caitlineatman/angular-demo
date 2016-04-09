@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app='store'>
+<head>
+	<title>Angular Demo</title>
+	<link rel='stylesheet' href='assets/plugins/bootstrap-3.3.6-dist/css/bootstrap.min.css' />
+</head>
+<body>
+ <!-- DIRECTIVE     CONTROLLER          ALIAS -->
+	<div ng-controller='StoreController as store'>
+		<div ng-repeat='product in store.products'>
+			<h1>{{product.name}}</h1>
+			<h2>${{product.price}}</h2>
+			<p>{{product.description}}</p>
+			<button ng-show='product.canPurchase' class='btn btn-primary'>Add to Cart</button>
+		</div>
+	</div>
+	<!-- grab scripts -->
+	<script type='text/javascript' src='assets/plugins/jquery-1.12.2/jquery-1.12.2.min.js'></script>
+	<script type='text/javascript' src='assets/plugins/angular-1.5.3/angular.min.js'></script>
+	<script type='text/javascript' src='assets/plugins/bootstrap-3.3.6-dist/js/bootstrap.min.js'></script>
+	<script type='text/javascript' src='assets/src/js/app.js'></script>
+</body>
+</html>
